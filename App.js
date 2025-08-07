@@ -54,6 +54,17 @@ button.style.border = 'none';
 button.style.color = 'white';
 button.style.marginTop = '50px';
 
+button.addEventListener('mouseenter', () => {
+  button.style.backgroundColor = '#b278d3ff'; 
+  button.style.transform = 'scale(1.05)';
+});
+
+
+button.addEventListener('mouseleave', () => {
+  button.style.backgroundColor = '#726080'; 
+  button.style.transform = 'scale(1)';
+});
+
 const list = document.createElement('ul');
 list.style.width = '100%';
 
