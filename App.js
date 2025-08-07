@@ -1,6 +1,6 @@
 const root = document.getElementById('root');
 document.body.style.backgroundColor = '#3F334D';
-
+document.body.style.overflowY = 'hidden';
 
 const header = document.createElement('header');
 header.style.width = '60%';
