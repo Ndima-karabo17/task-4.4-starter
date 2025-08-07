@@ -1,39 +1,41 @@
-// All your DOM manipulation must happen here.
 const root = document.getElementById('root');
-// You will create and inject all elements into <main id="root"> using JavaScript only.
-
-
-document.body.style.backgroundColor = 'purple';
+document.body.style.backgroundColor = '#3F334D';
 
 const task = document.createElement('input');
 task.type = 'text';
-task.placeholder = "Enter a task";
+task.placeholder = "Write new task";
 task.style.backgroundColor = 'white';
 task.style.width = '200px';
 task.style.height = '20px';
 task.style.border = 'none';
+task.style.width = '250px';
+task.style.height = '5vh';
+
 
 const section = document.createElement('section');
 section.style.padding = '20px';
 section.style.display = 'block';
-section.style.margin = '200px auto';
-section.style.backgroundColor = '#9400D3';
-section.style.width = '800px';
+section.style.margin = '120px auto';
+section.style.backgroundColor = '#574B60';
+section.style.width = '500px';
 section.style.height = '60vh';
 section.style.borderRadius = '30px';
 section.style.color = 'white';
 
 const button = document.createElement('button');
-button.textContent = 'SUBMIT';
+button.textContent = 'SUBMIT TASK';
 button.style.display = 'block';
-button.style.backgroundColor = 'purple';
-button.style.width = '80px';
-button.style.height = '4vh';
+button.style.backgroundColor = '#726080';
+button.style.width = '200px';
+button.style.height = '5vh';
 button.style.borderRadius = '10px';
 button.style.border = 'none';
 button.style.color = 'white';
+button.style.marginTop = '50px';
 
 const list = document.createElement('ul');
+list.style.width = '100%';
+
 const counter = document.createElement('p');
 
 function myButton() {
@@ -46,6 +48,17 @@ function myButton() {
 
         const li = document.createElement('li');
         li.style.listStyleType = "none";
+        li.style.display = 'flex';
+        li.style.alignItems = 'center';
+        li.style.justifyContent = 'space-between';
+        li.style.width = '50%';
+        li.style.backgroundColor = '#4A3F57';
+        li.style.marginBottom = '10px';
+        li.style.padding = '12px 16px';
+        li.style.borderRadius = '8px';
+        li.style.fontSize = '20px';
+
+
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -60,13 +73,14 @@ function myButton() {
 
         const deletebtn = document.createElement('button');
         deletebtn.textContent = "DELETE";
-        deletebtn.style.marginLeft = '10px';
-        deletebtn.style.backgroundColor = 'purple';
-        deletebtn.style.width = '80px';
-        deletebtn.style.height = '4vh';
+        deletebtn.style.backgroundColor = '#726080';
         deletebtn.style.borderRadius = '10px';
         deletebtn.style.border = 'none';
         deletebtn.style.color = 'white';
+        deletebtn.style.marginLeft = '10px';
+        deletebtn.style.width = '100px';
+        deletebtn.style.height = '30px';
+
         deletebtn.addEventListener('click', () => {
             li.remove();
             updateCounter();
