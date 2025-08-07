@@ -1,6 +1,27 @@
 const root = document.getElementById('root');
 document.body.style.backgroundColor = '#3F334D';
 
+
+const header = document.createElement('header');
+header.style.width = '60%';
+header.style.height = '5vh';
+header.style.textAlign = 'center';
+header.style.padding = '30px 0';
+header.style.backgroundColor = '#2E2533';
+header.style.color = 'white';
+header.style.fontSize = '20px';
+header.style.fontWeight = 'bold';
+header.style.letterSpacing = '2px';
+header.style.marginLeft = '300px';
+const heading = document.createElement('h1');
+heading.style.marginTop = '0';
+heading.textContent = 'THIS WEB PAGE IS TO DO';
+
+
+header.appendChild(heading);
+document.body.insertBefore(header, root);
+
+
 const task = document.createElement('input');
 task.type = 'text';
 task.placeholder = "Write new task";
